@@ -1,0 +1,19 @@
+{
+  "name": "bocar_matriz",
+  "version": "1.0.0",
+  "description": "Matriz de riesgos y control",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pedrodemiangodinezcruz/Bocar_Matriz.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pedrodemiangodinezcruz/Bocar_Matriz/issues"
+  },
+  "homepage": "https://github.com/pedrodemiangodinezcruz/Bocar_Matriz#readme"
+}
