@@ -9,29 +9,67 @@
         <thead>
           <tr>
             <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
+            <th scope="col">Concepto</th>
+            <th scope="col">Tipo</th>
+            <th scope="col">Descripción</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
+            <td>Proceso</td>
+            <td>Registro Manual</td>
+            <td>Nombre del proceso (se repite en todas las celdas de la columna)</td>
           </tr>
           <tr>
             <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
+            <td>Subproceso</td>
+            <td>Registro Manual</td>
+            <td>Subproceso al que pertenece</td>
           </tr>
           <tr>
             <th scope="row">3</th>
-            <td colspan="2">Larry the Bird</td>
-            <td>@twitter</td>
+            <td>Objetivo</td>
+            <td>Registro manual</td>
+            <td>Objetivo del proceso</td>
           </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td>ID Riesgo</td>
+            <td>Registro manual</td>
+            <td>Estructura del ID del riesgo:<br>
+              * Letra "R" (riesgo)<br>
+              * Guión (-)<br>
+              * Primera letra proceso<br>
+              * Consecutivo a 3 dígitos</td>
+          </tr>
+          <tr>
+            <th scope="row">5</th>
+            <td>Descripción del riesgo</td>
+            <td>Registro Manual</td>
+            <td>Efecto de la incertidumbre sobre la consecución de los objetivos del Grupo. La estructura sugerida para la redacción de un riesgo es:<br>
+              * Sustantivo<br>
+              * Verbo en participio<br>
+              * Adjetivo, adverbio o complemento circunstancial negativo<br>
+          </tr>
+          <tr>
+            <th scope="row">6</th>
+            <td>Causa</td>
+            <td>Registro manual</td>
+            <td>Causa raiz que origina el riesgo en caso de materialización.</td>
+          </tr>
+          <tr>
+            <th scope="row">7</th>
+            <td>Consecuencia</td>
+            <td>Registro manual</td>
+            <td>Efecto probable o esperado de la materialización del riesgo.</td>
+          </tr>
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-left-short" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+          </svg>
         </tbody>
       </table>
 </div>
