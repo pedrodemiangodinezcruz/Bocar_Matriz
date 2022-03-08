@@ -175,3 +175,8 @@ app.get("/", function (req, res) {
 	res.render('index')
 	
 })
+app.get("/instructivo", function (req, res) {
+	res.render('instructivo')
+	
+})
+
