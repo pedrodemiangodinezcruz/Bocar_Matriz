@@ -5,10 +5,14 @@
 <%- include('header') %>
 <%- include('sidebar') %>
 <div style="float: right; width: 78vw; height: 100vh;">
-    <table class="table">
+    <table class="table table-bordered" id="1">
         <thead>
           <tr>
-            <th scope="col">#</th>
+            <th scope="col" style="text-align: center;">#
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16" id="tabla1">
+                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+              </svg>
+            </th>
             <th scope="col">Concepto</th>
             <th scope="col">Tipo</th>
             <th scope="col">Descripción</th>
@@ -64,12 +68,83 @@
             <td>Registro manual</td>
             <td>Efecto probable o esperado de la materialización del riesgo.</td>
           </tr>
-          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-left-short" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
-          </svg>
-          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
-          </svg>
         </tbody>
       </table>
-</div>
+      <table class="table table-bordered" id="2" style="display: none;">
+        <thead>
+          <tr>
+            <th scope="col" style="text-align: center;">#
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-left-short" id="tabla2" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+              </svg>
+            </th>
+            <th scope="col" colspan="2">Concepto</th>
+            <th scope="col">Tipo</th>
+            <th scope="col">Descripción</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">8</th>
+            <td colspan="2">Tipo de evento</td>
+            <td>Lista despegable</td>
+            <td>El tipo de evento se selecciona con base en el tipo de riesgo identificado.</td>
+          </tr>
+          <tr>
+            <th scope="row">9</th>
+            <td colspan="2">Tipo de riesgo</td>
+            <td>Celda Formulada</td>
+            <td>Tipo de riesgo correspondiente al evento. De acuerdo a la tipología del riesgo, puede ser:<br>
+              a) Estratégico<br>
+              b) Financiero<br>
+              c) Cumplimiento<br>
+              d) Fraude<br>
+              e) Operacional</td>
+          </tr>
+          <tr>
+            <th scope="row">10</th>
+            <td rowspan="3" style="text-align: center; vertical-align: middle;">Importancia relativa</td>
+            <td>IF</td>
+            <td>Lista desplegable</td>
+            <td>Impacto financiero. Implica recursos económicos de tipo monetario, haciendo referencia a la incertidumbre producida en el rendimiento de una inversión, una decisión de los accionistas, los resultados de la propia operación del Grupo, o las condiciones del mercado. Alternativas de selección:<br>
+              * Muy Alto<br>
+              * Alto<br>
+              * Medio<br>
+              * Bajo<br>
+              * Muy Bajo<br>
+              * N/A (No aplica)</td>
+          </tr>
+          <tr>
+            <th scope="row">11</th>
+            <td>IC</td>
+            <td>Lista desplegable</td>
+            <td>Impacto sobre clientes. Implica pérdida potencial de clientes derivada del deterioro de su reputación o debido a una percepción negativa de la imagen de la institución. Alternativas de selección:<br>
+              * Muy Alto<br>
+              * Alto<br>
+              * Medio<br>
+              * Bajo<br>
+              * Muy Bajo<br>
+              * N/A (No aplica)</td>
+          </tr>
+          <tr>
+            <th scope="row">12</th>
+            <td>IO</td>
+            <td>Lista desplegable</td>
+            <td>Impacto Operacional. Derivado de deficiencias en los procesos operativos relacionados con eficacia, eficiencia, productividad o nivel de servicio. Se considera en este rubro a las deficiencia de las Tecnologías de la Información, los recursos humanos y  cualquier evento externo o interno adverso, relacionado con la operación del Grupo. Alternativas de selección:<br>
+              * Muy Alto<br>
+              * Alto<br>
+              * Medio<br>
+              * Bajo<br>
+              * Muy Bajo<br>
+              * N/A (No aplica)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    
+
+    <script src="/js/mostrar-tablas.js"></script>
