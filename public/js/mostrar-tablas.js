@@ -39,4 +39,29 @@
         document.getElementById("6").style.display = "none";
         document.getElementById("5").style.display = "table";
     }
+    document.getElementById("ir-tabla-7").onclick = function() {
+        document.getElementById("6").style.display = "none";
+        document.getElementById("7").style.display = "table";
+    }
+    document.getElementById("regresar-tabla6").onclick = function() {
+        document.getElementById("7").style.display = "none";
+        document.getElementById("6").style.display = "table";
+    }
+    document.getElementById("ir-tabla-8").onclick = function() {
+        document.getElementById("7").style.display = "none";
+        document.getElementById("8").style.display = "table";
+    }
+    document.getElementById("regresar-tabla7").onclick = function() {
+        document.getElementById("8").style.display = "none";
+        document.getElementById("7").style.display = "table";
+    }
+    document.getElementById("ir-tabla-9").onclick = function() {
+        document.getElementById("8").style.display = "none";
+        document.getElementById("9").style.display = "table";
+    }
+    document.getElementById("regresar-tabla8").onclick = function() {
+        document.getElementById("9").style.display = "none";
+        document.getElementById("8").style.display = "table";
+    }
+    
 
