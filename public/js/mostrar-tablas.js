@@ -65,3 +65,13 @@
     }
     
 
+//Seccion metodologia
+
+document.getElementById("ir-tabla-impacto").onclick = function() {
+    document.getElementById("tipo-riesgo").style.display = "none";
+    document.getElementById("impacto").style.display = "table";
+  }
+  document.getElementById("tabla2").onclick = function() {
+  document.getElementById("2").style.display = "none";
+  document.getElementById("1").style.display = "table";
+  }

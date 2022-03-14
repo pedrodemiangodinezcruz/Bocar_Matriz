@@ -179,4 +179,9 @@ app.get("/instructivo", function (req, res) {
 	res.render('instructivo')
 	
 })
+app.get("/metodologia", function (req, res) {
+	res.render('metodologia')
+	
+})
+
 
