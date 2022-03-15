@@ -63,15 +63,12 @@
         document.getElementById("9").style.display = "none";
         document.getElementById("8").style.display = "table";
     }
+    document.getElementById("ir-tabla-10").onclick = function() {
+        document.getElementById("9").style.display = "none";
+        document.getElementById("10").style.display = "table";
+    }
+    document.getElementById("regresar-tabla9").onclick = function() {
+        document.getElementById("10").style.display = "none";
+        document.getElementById("9").style.display = "table";
+    }
     
-
-//Seccion metodologia
-
-document.getElementById("ir-tabla-impacto").onclick = function() {
-    document.getElementById("tipo-riesgo").style.display = "none";
-    document.getElementById("impacto").style.display = "table";
-  }
-  document.getElementById("tabla2").onclick = function() {
-  document.getElementById("2").style.display = "none";
-  document.getElementById("1").style.display = "table";
-  }
