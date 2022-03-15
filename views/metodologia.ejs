@@ -115,7 +115,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-left-short" id="regresar-tabla2" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
                   </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16" id="tabla4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16" id="ir-tabla-4">
                   <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
                 </svg>
               </th>
@@ -129,14 +129,14 @@
         <tbody>
           <tr>
             <th scope="row" colspan="2" class="bg-danger">Muy Alto</th>
-            <td >El evento podría ocurrir en muchas circunstancias y es casi seguro que suceda.</td>
+            <td>El evento podría ocurrir en muchas circunstancias y es casi seguro que suceda.</td>
             <td >Más del 80%</td>
             <td >Cuando el evento puede presentarse de 6 a 12 veces al año.</td>
             <td >5</td>
           </tr>
           <tr>
             <th scope="row"  colspan="2" class="bg-warning">Alto</th>
-            <td >El evento e smuy probable que ocurra.</td>
+            <td >El evento es muy probable que ocurra.</td>
             <td >Más de 60% a 80%</td>
             <td >Cuando el evento puede presentarse de 4 a 5 veces al año.</td>
             <td >4</td>
@@ -150,13 +150,71 @@
           </tr>
           <tr>
             <th scope="row"  colspan="2" class="bajo">Bajo</th>
-            <td>Posiblemento podria ocurrir alguna vez</td>
+            <td >Posiblemento podria ocurrir alguna vez</td>
             <td >Más de 20% a 40%</td>
             <td>Cuando el evento puede presentarse 2 veces al año.</td>
             <td >2</td>
           </tr>
           <tr>
             <th scope="row"  colspan="2" class="bg-success">Muy bajo</th>
+            <td >Ocurrirá remotamente o en situaciones excepcionales</td>
+            <td >De 0% a 20%</td>
+            <td>Cuando el evento puede presentarse 1 vez al año.</td>
+            <td >1</td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="table table-bordered" id="4" style="display: none; text-align: center;">
+        <thead>
+          <tr>
+            <th scope="col" style="text-align: center;">#<br>
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-left-short" id="regresar-tabla3" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
+                  </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16" id="ir-tabla-5">
+                  <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+                </svg>
+              </th>
+            <th scope="col" colspan="5">IMPACTO</th>
+          </tr>
+          <th>PROBABILIDAD</th>
+          <th>Marginal</th>
+          <th>Débil</th>
+          <th>Importante</th>
+          <th>Crítico</th>
+          <th>Catastrófico</th>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row" class="bg-info">Muy Alto</th>
+            <td >El evento podría ocurrir en muchas circunstancias y es casi seguro que suceda.</td>
+            <td >Más del 80%</td>
+            <td >Cuando el evento puede presentarse de 6 a 12 veces al año.</td>
+            <td >5</td>
+          </tr>
+          <tr>
+            <th scope="row"   class="bg-info">Alto</th>
+            <td >El evento es muy probable que ocurra.</td>
+            <td >Más de 60% a 80%</td>
+            <td >Cuando el evento puede presentarse de 4 a 5 veces al año.</td>
+            <td >4</td>
+          </tr>
+          <tr>
+            <th scope="row"  class="bg-info">Medio</th>
+            <td >Problabemente ocurrirá alguna vez.</td>
+            <td >Más de 40% a 60%</td>
+            <td >Cuando el evento puede presentarse 2 veces al año.</td>
+            <td >3</td>
+          </tr>
+          <tr>
+            <th scope="row"  class="bg-info">Bajo</th>
+            <td>Posiblemento podria ocurrir alguna vez</td>
+            <td >Más de 20% a 40%</td>
+            <td>Cuando el evento puede presentarse 2 veces al año.</td>
+            <td >2</td>
+          </tr>
+          <tr>
+            <th scope="row"  class="bg-info">Muy bajo</th>
             <td>Ocurrirá remotamente o en situaciones excepcionales</td>
             <td >De 0% a 20%</td>
             <td>Cuando el evento puede presentarse 1 vez al año.</td>
