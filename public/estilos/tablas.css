@@ -1,3 +1,25 @@
+.encabezado{
+    background-color: rgb(68, 114, 196) !important;
+    color: white;
+    }
+.morado{
+        background-color: rgb(0, 0, 106) !important;
+        color: white;
+}
+.naranja{
+    background-color: rgb(222, 132, 0) !important;
+    color: white;
+}
+.gris{
+    background-color: gray !important;
+    color: white;
+    
+}
+.azul-marino{
+    background-color: rgb(48, 84, 150) !important;
+    color: white;
+    
+}
 .medio{
 background-color: yellow !important;
 }
