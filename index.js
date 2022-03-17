@@ -185,4 +185,18 @@ app.get("/metodologia", function (req, res) {
 app.get("/matriz", function (req, res) {
 	res.render('matriz')
 })
-
+app.get("/calculos", function (req, res) {
+	res.render('calculos')
+})
+app.get("/estadisticas", function (req, res) {
+	res.render('estadisticas')
+})
+app.get("/mapaResidual", function (req, res) {
+	res.render('mapaResidual')
+})
+app.get("/mapaRiesgo", function (req, res) {
+	res.render('mapaRiesgo')
+})
+app.get("/pareto", function (req, res) {
+	res.render('pareto')
+})
