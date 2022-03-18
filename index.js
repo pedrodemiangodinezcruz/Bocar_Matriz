@@ -185,8 +185,8 @@ app.get("/metodologia", function (req, res) {
 app.get("/matriz", function (req, res) {
 	res.render('matriz')
 })
-app.get("/calculos", function (req, res) {
-	res.render('calculos')
+app.get("/criterios", function (req, res) {
+	res.render('criterios')
 })
 app.get("/estadisticas", function (req, res) {
 	res.render('estadisticas')

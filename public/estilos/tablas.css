@@ -58,3 +58,14 @@ background-color: rgb(109, 241, 109) !important;
  text-align: center !important;
  vertical-align: middle !important;
 }
+table{
+    vertical-align: middle;
+}
+.link{
+    color: white; 
+    text-decoration: none;
+}
+.link:hover{
+    color: white; 
+    text-decoration: none;
+}
