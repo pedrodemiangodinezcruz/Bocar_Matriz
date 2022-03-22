@@ -169,16 +169,15 @@ app.get('/consultaPerfil/:id', (req, res) => {
 
 app.listen(3000, function () {
 	console.log("Servidor corriendo en el puerto 3000");
-    
 })
+
 app.get("/", function (req, res) {
-	res.render('index')
-	
+	res.render('index')	
 })
 app.get("/instructivo", function (req, res) {
 	res.render('instructivo')
-	
 })
+
 app.get("/metodologia", function (req, res) {
 	res.render('metodologia')
 })
@@ -192,7 +191,7 @@ app.get("/estadisticas", function (req, res) {
 	res.render('estadisticas')
 })
 app.get("/mapaResidual", function (req, res) {
-	res.render('mapaResidual')
+	res.render('mapaResidual' )
 })
 app.get("/mapaRiesgo", function (req, res) {
 	res.render('mapaRiesgo')
