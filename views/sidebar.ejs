@@ -1,4 +1,8 @@
 <link href="/estilos/sidebars.css" rel="stylesheet">
+
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
 <div style="display:inline-block;">
   <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 20vw; height: 100vh;">
     <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
@@ -296,7 +300,7 @@
               <p class="text-center fw-bold">ID del Control</p>
               <div class="form-floating mb-3">
                 <input type="text" class="form-control" name="idControl" placeholder="ID del Control">
-              <label for="floatingInput">ID del Control</label>
+                <label for="floatingInput">ID del Control</label>
               </div>
             </div>
             <div class="col">
@@ -308,10 +312,184 @@
                 </select>
               </div>
             </div>
+          </div>
+          <div class="row">
+            <div class="mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label">Descripción del Control</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" name="evidencia" placeholder="Evidencia del Control">
+                <label for="floatingInput">Evidencia del Control</label>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="form-floating mb-3">
+                <br>
+                <p class="text-center fw-bold">Segregación de Funciones</p>
+                <select class="form-select" name="segregacionFunciones" aria-label="Default select example">
+                  <option value="Sí">Sí</option>
+                  <option value="No">No</option>
+                </select>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-floating mb-3">
+                <p class="text-center fw-bold">Documentación (Política, manual, procedimiento, etc.)</p>
+                <select class="form-select" name="documentacion" aria-label="Default select example">
+                  <option value="Sí">Sí</option>
+                  <option value="No">No</option>
+                </select>
+              </div>
+            </div>
+            <div class="col">
+              <br>
+              <p class="text-center fw-bold">Tipo de Control</p><br>
+              <div class="form-floating mb-3">
+                <select class="form-select" name="tipoControl" aria-label="Default select example">
+                  <option value="Preventivo">Preventivo</option>
+                  <option value="Detectivo">Detectivo</option>
+                </select>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-floating mb-3">
+                <br>
+                <p class="text-center fw-bold">Naturaleza adecuada</p><br>
+                <select class="form-select" name="naturaleza" aria-label="Default select example">
+                  <option value="Sí">Sí</option>
+                  <option value="No">No</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="form-floating mb-3">
+                <p class="text-center fw-bold">Naturaleza de Control</p>
+                <select class="form-select" name="naturalezaControl" aria-label="Default select example">
+                  <option value="Manual">Manual</option>
+                  <option value="Automático">Automático</option>
+                  <option value="Semi-automático">Semi-automático</option>
+                </select>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-floating mb-3">
+                <p class="text-center fw-bold">Tipo Adecuado</p>
+                <select class="form-select" name="tipoAdecuado" aria-label="Default select example">
+                  <option value="Sí">Sí</option>
+                  <option value="No">No</option>
+                </select>
+              </div>
+            </div>
+            <div class="col">
+              <p class="text-center fw-bold">Frecuencia de Control</p>
+              <div class="form-floating mb-3">
+                <select class="form-select" name="frecuenciaControl" aria-label="Default select example">
+                  <option value="Anual">Anual</option>
+                  <option value="Por Evento">Por evento</option>
+                </select>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-floating mb-3">
+                <p class="text-center fw-bold">Frecuencia adecuada</p>
+                <select class="form-select" name="frecuenciaControlAdecuada" aria-label="Default select example">
+                  <option value="Sí">Sí</option>
+                  <option value="No">No</option>
+                </select>
+              </div>
+            </div>
             </div>
             <div class="row">
-              
+              <div class="col">
+                <div class="form-floating mb-3">
+                  <p class="text-center fw-bold">Responsable del Control</p>
+                  <select class="form-select" name="responsableControl" aria-label="Default select example">
+                    <option value="Área de Finanzas">Área de Finanzas</option>
+                    <option value="Controlador de Gestión">Controlador de Gestión</option>
+                    <option value="Controlador de Gestión Divisional">Controlador de Gestión Divisional</option>
+                    <option value="Controlador de Gestión Divisional/Gerente de contabiliadad y Finanzas">Controlador de Gestión Divisional/Gerente de contabiliadad y Finanzas</option>
+                    <option value="Coordinador de Planeación Financiera">Coordinador de Planeación Financiera</option>
+                    <option value="Director de Finanzas y Administración Grupo">Director de Finanzas y Administración Grupo</option>
+                    <option value="Gerente de Finanzas y Contabilidad">Gerente de Finanzas y Contabilidad</option>
+                    <option value="Jefe de planeación Financiera">Jefe de planeación Financiera</option>
+                  </select>
+                </div>
               </div>
+              <div class="col">
+                <div class="form-floating mb-3">
+                  <p class="text-center fw-bold">Responsabilidad del Control</p>
+                  <select class="form-select" name="responsabilidadControl" aria-label="Default select example">
+                    <option value="Sí">Sí</option>
+                    <option value="No">No</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col">
+                <p class="text-center fw-bold">Generación de Evidencia</p>
+                <div class="form-floating mb-3">
+                  <select class="form-select" name="generadoEvidencia" aria-label="Default select example">
+                    <option value="Sí">Sí</option>
+                    <option value="No">No</option>
+                  </select>
+                </div>
+              </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="form-floating mb-3">
+                    <p class="text-center fw-bold">Control clave</p><br>
+                    <select class="form-select" name="controlClave" aria-label="Default select example">
+                      <option value="Sí">Sí</option>
+                      <option value="No">No</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col">
+                  <p class="text-center fw-bold">Control diseñado para mitigar fraude</p>
+                  <div class="form-floating mb-3">
+                    <select class="form-select" name="diseñoMitigado" aria-label="Default select example">
+                      <option value="Sí">Sí</option>
+                      <option value="No">No</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col">
+                  <p class="text-center fw-bold">Cobertura individual por Control (%)</p>
+                  <div class="mb-3" style="display: inline-flex;">
+                          <button type="button" class="quantity-left-minus btn btn-danger btn-number"  data-type="minus" data-field="">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash-square" viewBox="0 0 16 16">
+                              <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                              <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                            </svg>
+                          </button>
+                      <input type="text" id="quantity" name="coberturaControl" class="form-control input-number" value="50" min="1" max="100"> 
+                          <button type="button" class="quantity-right-plus btn btn-success btn-number" data-type="plus" data-field="">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square" viewBox="0 0 16 16">
+                              <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                              <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                            </svg>
+                          </button>
+                </div>
+              </div>
+              </div>
+              <div class="row">
+                <div class="row">
+                  <div class="col">
+                    <div class="form-floating mb-3">
+                      <input type="text" class="form-control" name="estrategiaRiesgo" placeholder="Estrategia de tratamiento del Riesgo ">
+                      <label for="floatingInput">Estrategia de tratamiento del Riesgo </label>
+                    </div>
+                  </div>
+                </div>
+          </div>
         </form>
       </div>
       <div class="modal-footer">
@@ -321,3 +499,4 @@
     </div>
   </div>
 </div>
+<script src="/js/formulario.js"></script>
