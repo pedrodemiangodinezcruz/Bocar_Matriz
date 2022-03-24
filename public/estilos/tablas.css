@@ -69,3 +69,6 @@ table{
     color: white; 
     text-decoration: none;
 }
+.row>* {
+    padding-left: 0 !important;
+}
