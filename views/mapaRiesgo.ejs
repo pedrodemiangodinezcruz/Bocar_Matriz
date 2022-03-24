@@ -3,6 +3,14 @@
 <link href="/estilos/header.css" rel="stylesheet">
 <link href="/estilos/tablas.css" rel="stylesheet">
 <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/sidebars/">
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<head><script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="/js/plotly-2.9.0.min.js"></script>
+    <script src="/js/mapaRiesgo.js"></script>
+</head>
+
+
+<body>
 <%- include('header', {seccion: "mapaRiesgo"}) %>
 <%- include('sidebar') %>
 <div class="col-auto ">
@@ -42,40 +50,12 @@
       
       </div>
       <div class="col-6">
-        <table class="table table-bordered text-center">
-            <thead>
-              <tr>
-                <th scope="col" colspan="3" class="anaranjado">MAPA DE CALOR RIESGO INHERENTE</th>
-              </tr>
-              <tr>
-                <tr>
-                    <th scope="col" colspan="3" ></th>
-                  </tr>
-                  <tr>
-                <th scope="col" class="naranja">ID Riesgo</th>
-                <th scope="col" class="naranja">Impacto</th>
-                <th scope="col" class="naranja">Probabilidad</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>R-M7-01</td>
-                <td>Crítico</td>
-                <td>Bajo</td>
-              </tr>
-              <tr>
-                <td>R-M7-01</td>
-                <td>Crítico</td>
-                <td>Bajo</td>
-              </tr>
-              <tr>
-                <td>R-M7-01</td>
-                <td>Crítico</td>
-                <td>Bajo</td>
-              </tr>
-            </tbody>
-          </table>
-          
-          </div>
+        <p>
+            Here's a simple Plotly plot - 
+            <a href="https://bit.ly/1Or9igj">plotly.js documentation</a>
+        </p>
+        
+        <div id='myDiv'><!-- Plotly chart will be drawn inside this DIV --></div>
     <!--Cierre de tag div abierta en el side bar para poner el contenido en una solo columna-->
   </div>
+</body>
