@@ -13,8 +13,8 @@
 <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/sidebars/">
 <%- include('header', {seccion: "estadisticas" }) %>
     <%- include('sidebar') %>
-
-        <div class="col">
+        <!--Tabla y pastel de riesgo inherente empieza-->
+        <div class="col" id="riesgoInherente">
             <table class="table table-bordered" style="text-align: center;">
                 <thead>
                     <tr>
@@ -23,12 +23,7 @@
                     <tr>
                         <th scope="col" colspan="6" style="text-align: center;">
                             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                                class="bi bi-arrow-left-short" id="regresar-tabla3" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd"
-                                    d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z" />
-                            </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                                class="bi bi-arrow-right-short" viewBox="0 0 16 16" id="ir-tabla-5">
+                                class="bi bi-arrow-right-short" viewBox="0 0 16 16" id="ir-tabla-controles">
                                 <path fill-rule="evenodd"
                                     d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
                             </svg>
@@ -66,10 +61,10 @@
         </div>
 
         <script>
-            
+
             // Insertar colores desde verde a rojo ver si este metodo me sirve depsues para asignar los colores :)
             var pieColors = (function () {
-                var colors = ['rgb(255,0,0)','rgb(255,128,0)','rgb(255,255,0)','rgb(128,216,40)', 'rgb(0,176,80)'];
+                var colors = ['rgb(255,0,0)', 'rgb(255,128,0)', 'rgb(255,255,0)', 'rgb(128,216,40)', 'rgb(0,176,80)'];
                 return colors;
             }());
 
@@ -96,7 +91,7 @@
                     pie: {
                         allowPointSelect: true,
                         cursor: 'pointer',
-                        colors: ['rgb(255,0,0)','rgb(255,128,0)','rgb(255,255,0)','rgb(128,216,40)', 'rgb(0,176,80)'],
+                        colors: ['rgb(255,0,0)', 'rgb(255,128,0)', 'rgb(255,255,0)', 'rgb(128,216,40)', 'rgb(0,176,80)'],
                         dataLabels: {
                             enabled: true,
                             format: '<b>{point.name}</b><br>{point.percentage:.1f} %',
@@ -121,3 +116,113 @@
                 }]
             });
         </script>
+        <!--Tabla y pastel de nivel de coberetura empieza-->
+        <div class="col" id="controles" style="display: none;">
+            <table class="table table-bordered" style="text-align: center;">
+                <thead>
+                    <tr>
+                        <th scope="col" colspan="6" class="azul-marino" style="text-align: left;">NIVEL DE COBERTURA DEL
+                            CONJUNTO DE CONTROLES</th>
+                    </tr>
+                    <tr>
+                        <th scope="col" colspan="6" style="text-align: center;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                                class="bi bi-arrow-left-short" id="regresar-tabla-riesgoInherente" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                                class="bi bi-arrow-right-short" viewBox="0 0 16 16" id="ir-tabla-riesgoResidual">
+                                <path fill-rule="evenodd"
+                                    d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                            </svg>
+                        </th>
+                    </tr>
+                    <th class="azul-marino">Cobertura del Conjunto de Controles</th>
+                    <th class="azul-marino">Frecuencia</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Total</th>
+                        <td>0</td>
+                    <tr>
+                        <th scope="row">Alto</th>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Medio</th>
+                        <td>14</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Bajo</th>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ausencia de Control</th>
+                        <td>0</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <figure class="highcharts-figure">
+                <div id="container2"></div>
+            </figure>
+        </div>
+
+        <script>
+
+            // Insertar colores desde verde a rojo ver si este metodo me sirve depsues para asignar los colores :)
+            var pieColors = (function () {
+                var colors = ['rgb(0,176,80)', 'rgb(128,216,40)', 'rgb(255,255,0)',  'rgb(255,128,0)','rgb(255,0,0)'];
+                return colors;
+            }());
+
+            // Build the chart
+            Highcharts.chart('container2', {
+                chart: {
+                    plotBackgroundColor: null,
+                    plotBorderWidth: null,
+                    plotShadow: false,
+                    type: 'pie'
+                },
+                title: {
+                    text: 'Diagrama de pastel con base en el nivel de cobertura'
+                },
+                tooltip: {
+                    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                },
+                accessibility: {
+                    point: {
+                        valueSuffix: '%'
+                    }
+                },
+                plotOptions: {
+                    pie: {
+                        allowPointSelect: true,
+                        cursor: 'pointer',
+                        colors: ['rgb(0,176,80)', 'rgb(128,216,40)', 'rgb(255,255,0)',  'rgb(255,128,0)','rgb(255,0,0)'],
+                        dataLabels: {
+                            enabled: true,
+                            format: '<b>{point.name}</b><br>{point.percentage:.1f} %',
+                            distance: -50,
+                            filter: {
+                                property: 'percentage',
+                                operator: '>',
+                                value: 4
+                            }
+                        }
+                    }
+                },
+                series: [{
+                    name: 'Porcentaje',
+                    data: [
+                        { name: 'Total', y: 46.41 },
+                        { name: 'Alto', y: 13.84 },
+                        { name: 'Medio', y: 9.85 },
+                        { name: 'Bajo', y: 15.23 },
+                        { name: 'Ausencia de control', y: 14.67 }
+                    ]
+                }]
+            });
+        </script>
+        <script src="/js/mostrarEstadisticas.js"></script>
