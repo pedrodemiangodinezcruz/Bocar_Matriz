@@ -54,7 +54,7 @@
                     </tr>
                 </tbody>
             </table>
-
+            
             <figure class="highcharts-figure">
                 <div id="container"></div>
             </figure>
@@ -117,7 +117,7 @@
             });
         </script>
         <!--Tabla y pastel de nivel de coberetura empieza-->
-        <div class="col" id="controles" style="display: none;">
+        <div class="col" id="controles" style="text-align: center; display: none;">
             <table class="table table-bordered" style="text-align: center;">
                 <thead>
                     <tr>
@@ -164,8 +164,8 @@
                 </tbody>
             </table>
 
-            <figure class="highcharts-figure">
-                <div id="container2"></div>
+            <figure class="highcharts-figure" >
+                <div id="container2" style="align-content: center; align-items: center;"></div>
             </figure>
         </div>
 
@@ -225,4 +225,108 @@
                 }]
             });
         </script>
+
+        <!--Tabla y pastel de riesgo residual empieza-->
+        <div class="col" id="riesgoResidual" style="text-align: center; display: none;">
+            <table class="table table-bordered" style="text-align: center;">
+                <thead>
+                    <tr>
+                        <th scope="col" colspan="6" class="verde" style="text-align: left;">RIESGO RESIDUAL</th>
+                    </tr>
+                    <tr>
+                        <th scope="col" colspan="6" style="text-align: center;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                                class="bi bi-arrow-left-short" id="regresar-tabla-controles" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z" />
+                            </svg>
+                        </th>
+                    </tr>
+                    <th class="verde">Gravedad</th>
+                    <th class="verde">Frecuencia</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">MA</th>
+                        <td>0</td>
+                    <tr>
+                        <th scope="row">A</th>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">M</th>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">B</th>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">MB</th>
+                        <td>0</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <figure class="highcharts-figure">
+                <div id="container3"></div>
+            </figure>
+        </div>
+        <script>
+
+            // Insertar colores desde verde a rojo ver si este metodo me sirve depsues para asignar los colores :)
+            var pieColors = (function () {
+                var colors = ['rgb(0,176,80)', 'rgb(128,216,40)', 'rgb(255,255,0)',  'rgb(255,128,0)','rgb(255,0,0)'];
+                return colors;
+            }());
+
+            // Build the chart
+            Highcharts.chart('container3', {
+                chart: {
+                    plotBackgroundColor: null,
+                    plotBorderWidth: null,
+                    plotShadow: false,
+                    type: 'pie'
+                },
+                title: {
+                    text: 'Diagrama de pastel con base en el nivel de riesgo residual'
+                },
+                tooltip: {
+                    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                },
+                accessibility: {
+                    point: {
+                        valueSuffix: '%'
+                    }
+                },
+                plotOptions: {
+                    pie: {
+                        allowPointSelect: true,
+                        cursor: 'pointer',
+                        colors: ['rgb(0,176,80)', 'rgb(128,216,40)', 'rgb(255,255,0)',  'rgb(255,128,0)','rgb(255,0,0)'],
+                        dataLabels: {
+                            enabled: true,
+                            format: '<b>{point.name}</b><br>{point.percentage:.1f} %',
+                            distance: -50,
+                            filter: {
+                                property: 'percentage',
+                                operator: '>',
+                                value: 4
+                            }
+                        }
+                    }
+                },
+                series: [{
+                    name: 'Porcentaje',
+                    data: [
+                        { name: 'MB', y: 46.41 },
+                        { name: 'B', y: 13.84 },
+                        { name: 'M', y: 9.85 },
+                        { name: 'A', y: 15.23 },
+                        { name: 'MA', y: 14.67 }
+                    ]
+                }]
+            });
+        </script>
+
         <script src="/js/mostrarEstadisticas.js"></script>
