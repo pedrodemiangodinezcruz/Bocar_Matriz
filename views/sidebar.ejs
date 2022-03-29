@@ -8,33 +8,65 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="modalRiesgoLabel">Llene los campos para añadir un Riesgo</h5>
+        <h5 class="modal-title fs-5 fw-bold" id="modalRiesgoLabel">Llene los campos para añadir un Riesgo</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <form>
           <div class="row">
             <div class="col">
+              <!--Cambiar esto por los macros, proceos y subproceso de la bd-->
+              <p class="text-center fw-bold">Macroproceso adjunto</p>
               <div class="form-floating mb-3">
-                <input type="text" class="form-control" name="macroproceso" placeholder="Macroproceso">
-                <label for="floatingInput">Macroproceso</label>
+                <select class="form-select" name="macroproceso" aria-label="Default select example">
+                  <option selected>...</option>
+                  <option value="Eficiencia,Calidad y Productividad">Eficiencia,Calidad y Productividad</option>
+                  <option value="Fraude Interno">Fraude Interno</option>
+                  <option value="Gobierno, Político y Económico">Gobierno, Político y Económico</option>
+                  <option value="Información Contable y Financiera">Información Contable y Financiera</option>
+                  <option value=">Modelo de Negocios y Estrategias">Modelo de Negocios y Estrategias</option>
+                  <option value="Segregación de funciones">Segregación de funciones</option>
+                </select>
+                <label for="floatingSelect">Seleccione un macroproceso
+                </label>
               </div>
             </div>
             <div class="col">
-              <div class="form-floating">
-                <input type="text" class="form-control" name="proceso" placeholder="Proceso">
-                <label for="floatingInput">Proceso</label>
-              </div>
+              <!--Cambiar esto por los macros, proceos y subproceso de la bd-->
+              <p class="text-center fw-bold">Proceso adjunto</p>
+              <div class="form-floating mb-3">
+                <select class="form-select" name="macroproceso" aria-label="Default select example">
+                  <option selected>...</option>
+                  <option value="Eficiencia,Calidad y Productividad">Eficiencia,Calidad y Productividad</option>
+                  <option value="Fraude Interno">Fraude Interno</option>
+                  <option value="Gobierno, Político y Económico">Gobierno, Político y Económico</option>
+                  <option value="Información Contable y Financiera">Información Contable y Financiera</option>
+                  <option value=">Modelo de Negocios y Estrategias">Modelo de Negocios y Estrategias</option>
+                  <option value="Segregación de funciones">Segregación de funciones</option>
+                </select>
+                <label for="floatingSelect">Seleccione un proceso</label>
             </div>
+          </div>
           </div>
           <div class="row">
             <div class="col">
+              <!--Cambiar esto por los macros, proceos y subproceso de la bd-->
+              <p class="text-center fw-bold">Subproceso adjunto</p>
               <div class="form-floating mb-3">
-                <input type="text" class="form-control" name="subproceso" placeholder="Subproceso">
-                <label for="floatingInput">Subproceso</label>
-              </div>
+                <select class="form-select" name="macroproceso" aria-label="Default select example">
+                  <option selected>...</option>
+                  <option value="Eficiencia,Calidad y Productividad">Eficiencia,Calidad y Productividad</option>
+                  <option value="Fraude Interno">Fraude Interno</option>
+                  <option value="Gobierno, Político y Económico">Gobierno, Político y Económico</option>
+                  <option value="Información Contable y Financiera">Información Contable y Financiera</option>
+                  <option value=">Modelo de Negocios y Estrategias">Modelo de Negocios y Estrategias</option>
+                  <option value="Segregación de funciones">Segregación de funciones</option>
+                </select>
+                <label for="floatingSelect">Seleccione un subproceso</label>
+            </div>
             </div>
             <div class="col">
+              <p class="text-center fw-bolder">ID del Riesgo</p>
               <div class="form-floating">
                 <input type="text" class="form-control" name="idRiesgo" placeholder="ID Riesgo">
                 <label for="floatingInput">ID Riesgo</label>
@@ -191,32 +223,62 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="modalRiesgoLabel">Llene los campos para añadir un control de riesgo</h5>
+        <h5 class="modal-title fw-bold" id="modalRiesgoLabel">Llene los campos para añadir un control de riesgo</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <form>
           <div class="row">
             <div class="col">
+              <!--Cambiar esto por los macros, proceos y subproceso de la bd-->
+              <p class="text-center fw-bold">Macro proceso adjunto</p>
               <div class="form-floating mb-3">
-                <input type="text" class="form-control" name="macroproceso" placeholder="Macroproceso">
-                <label for="floatingInput">Macroproceso</label>
-              </div>
+                <select class="form-select" name="macroproceso" aria-label="Default select example">
+                  <option selected>...</option>
+                  <option value="Eficiencia,Calidad y Productividad">Eficiencia,Calidad y Productividad</option>
+                  <option value="Fraude Interno">Fraude Interno</option>
+                  <option value="Gobierno, Político y Económico">Gobierno, Político y Económico</option>
+                  <option value="Información Contable y Financiera">Información Contable y Financiera</option>
+                  <option value=">Modelo de Negocios y Estrategias">Modelo de Negocios y Estrategias</option>
+                  <option value="Segregación de funciones">Segregación de funciones</option>
+                </select>
+                <label for="floatingSelect">Seleccione un macro proceso</label>
+            </div>
             </div>
             <div class="col">
-              <div class="form-floating">
-                <input type="text" class="form-control" name="proceso" placeholder="Proceso">
-                <label for="floatingInput">Proceso</label>
-              </div>
+              <!--Cambiar esto por los macros, proceos y subproceso de la bd-->
+              <p class="text-center fw-bold">Proceso adjunto</p>
+              <div class="form-floating mb-3">
+                <select class="form-select" name="proceso" aria-label="Default select example">
+                  <option selected>...</option>
+                  <option value="Eficiencia,Calidad y Productividad">Eficiencia,Calidad y Productividad</option>
+                  <option value="Fraude Interno">Fraude Interno</option>
+                  <option value="Gobierno, Político y Económico">Gobierno, Político y Económico</option>
+                  <option value="Información Contable y Financiera">Información Contable y Financiera</option>
+                  <option value=">Modelo de Negocios y Estrategias">Modelo de Negocios y Estrategias</option>
+                  <option value="Segregación de funciones">Segregación de funciones</option>
+                </select>
+                <label for="floatingSelect">Seleccione un proceso</label>
             </div>
+          </div>
           </div>
           <div class="row">
             <div class="col">
+              <!--Cambiar esto por los macros, proceos y subproceso de la bd-->
+              <p class="text-center fw-bold">Proceso adjunto</p>
               <div class="form-floating mb-3">
-                <input type="text" class="form-control" name="subproceso" placeholder="Subproceso">
-                <label for="floatingInput">Subproceso</label>
-              </div>
+                <select class="form-select" name="subproceso" aria-label="Default select example">
+                  <option selected>...</option>
+                  <option value="Eficiencia,Calidad y Productividad">Eficiencia,Calidad y Productividad</option>
+                  <option value="Fraude Interno">Fraude Interno</option>
+                  <option value="Gobierno, Político y Económico">Gobierno, Político y Económico</option>
+                  <option value="Información Contable y Financiera">Información Contable y Financiera</option>
+                  <option value=">Modelo de Negocios y Estrategias">Modelo de Negocios y Estrategias</option>
+                  <option value="Segregación de funciones">Segregación de funciones</option>
+                </select>
+                <label for="floatingSelect">Seleccione un subproceso</label>
             </div>
+          </div>
           </div>
           <div class="row">
             <div class="col">
@@ -469,7 +531,7 @@
   </div>
 </div>
 
-<div class="row">
+<div class="row" >
   <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 20vw; height: 100vh;">
     <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
       <svg class="bi me-2" width="40" height="32">
