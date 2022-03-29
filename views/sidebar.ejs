@@ -3,12 +3,12 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
-<!-- Modal para llenado de macroproceso -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- Modal para llenado de riesgo -->
+<div class="modal fade" id="modalRiesgo" tabindex="-1" aria-labelledby="modalRiesgoLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Llene los campos para añadir un Macroproceso</h5>
+        <h5 class="modal-title" id="modalRiesgoLabel">Llene los campos para añadir un Riesgo</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -70,6 +70,7 @@
               <p class="text-center fw-bold">Tipo de Evento</p>
               <div class="form-floating mb-3">
                 <select class="form-select" name="tipoEvento" aria-label="Default select example">
+                  <option selected>...</option>
                   <option value="Eficiencia,Calidad y Productividad">Eficiencia,Calidad y Productividad</option>
                   <option value="Fraude Interno">Fraude Interno</option>
                   <option value="Gobierno, Político y Económico">Gobierno, Político y Económico</option>
@@ -77,110 +78,147 @@
                   <option value=">Modelo de Negocios y Estrategias">Modelo de Negocios y Estrategias</option>
                   <option value="Segregación de funciones">Segregación de funciones</option>
                 </select>
+                <label for="floatingSelect">Seleccione una opción</label>
               </div>
             </div>
             <div class="col">
+              <p class="text-center fw-bold">Tipo de Riesgo</p>
               <div class="form-floating mb-3">
-                <p class="text-center fw-bold">Tipo de Riesgo</p>
                 <select class="form-select" name="tipoRiesgo" aria-label="Default select example">
+                  <option selected>...</option>
                   <option value="Estratégico">Estratégico</option>
                   <option value="Financiero">Financiero</option>
                   <option value="Fraude">Fraude</option>
                   <option value="Operacional">Operacional</option>
                   <option value="Tecnologico">Tecnologico</option>
                 </select>
+                <label for="floatingSelect">Seleccione una opción</label>
               </div>
             </div>
           </div>
           <p class="text-center fw-bolder fs-5">Importancia relativa</p>
           <div class="row">
             <div class="col">
+              <p class="text-center fw-bold">IF</p>
               <div class="form-floating mb-3">
-                <p class="text-center fw-bold">IF</p>
                 <select class="form-select" name="if" aria-label="Default select example">
+                  <option selected>...</option>
                   <option value="Muy Alto">Muy Alto</option>
                   <option value="Alto">Alto</option>
                   <option value="Medio">Medio</option>
                   <option value="Bajo">Bajo</option>
                   <option value="Muy Bajo">Muy Bajo</option>
                 </select>
+                <label for="floatingSelect">Seleccione una opción</label>
               </div>
             </div>
             <div class="col">
+              <p class="text-center fw-bold">IC</p>
               <div class="form-floating mb-3">
-                <p class="text-center fw-bold">IC</p>
                 <select class="form-select" name="ic" aria-label="Default select example">
+                  <option selected>...</option>
                   <option value="Muy Alto">Muy Alto</option>
                   <option value="Alto">Alto</option>
                   <option value="Medio">Medio</option>
                   <option value="Bajo">Bajo</option>
                   <option value="Muy Bajo">Muy Bajo</option>
                 </select>
+                <label for="floatingSelect">Seleccione una opción</label>
               </div>
             </div>
             <div class="col">
+              <p class="text-center fw-bold">IO</p>
               <div class="form-floating mb-3">
-                <p class="text-center fw-bold">IO</p>
                 <select class="form-select" name="io" aria-label="Default select example">
+                  <option selected>...</option>
                   <option value="Muy Alto">Muy Alto</option>
                   <option value="Alto">Alto</option>
                   <option value="Medio">Medio</option>
                   <option value="Bajo">Bajo</option>
                   <option value="Muy Bajo">Muy Bajo</option>
                 </select>
+                <label for="floatingSelect">Seleccione una opción</label>
               </div>
             </div>
           </div>
           <div class="row">
             <div class="col">
+              <p class="text-center fw-bold">Riesgo de Fraude</p>
               <div class="form-floating mb-3">
-                <p class="text-center fw-bold">Riesgo de Fraude</p>
                 <select class="form-select" name="riesgoFraude" aria-label="Default select example">
+                  <option selected>...</option>
                   <option value="Sí">Sí</option>
                   <option value="No">No</option>
                 </select>
+                <label for="floatingSelect">Seleccione una opción</label>
               </div>
             </div>
             <div class="col">
+              <p class="text-center fw-bold">Probabilidad</p>
               <div class="form-floating mb-3">
-                <p class="text-center fw-bold">Probabilidad</p>
                 <select class="form-select" name="probabilidad" aria-label="Default select example">
+                  <option selected>...</option>
                   <option value="Alta">Alta</option>
                   <option value="Media">Media</option>
                   <option value="Baja">Baja</option>
                 </select>
+                <label for="floatingSelect">Seleccione una opción</label>
               </div>
             </div>
             <div class="col">
+              <p class="text-center fw-bold">Impacto</p>
               <div class="form-floating mb-3">
-                <p class="text-center fw-bold">Impacto</p>
                 <select class="form-select" name="riesgoFraude" aria-label="Default select example">
+                  <option selected>...</option>
                   <option value="Crítico">Crítico</option>
                   <option value="Importante">Importante</option>
                 </select>
+                <label for="floatingSelect">Seleccione una opción</label>
+              </div>
+            </div>
+          </div>
+          </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary">Añadir Riesgo</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal para llenado de control de riesgo -->
+<div class="modal fade" id="modalControl" tabindex="-1" aria-labelledby="modalRiesgoLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalRiesgoLabel">Llene los campos para añadir un control de riesgo</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="row">
+            <div class="col">
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" name="macroproceso" placeholder="Macroproceso">
+                <label for="floatingInput">Macroproceso</label>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-floating">
+                <input type="text" class="form-control" name="proceso" placeholder="Proceso">
+                <label for="floatingInput">Proceso</label>
               </div>
             </div>
           </div>
           <div class="row">
             <div class="col">
               <div class="form-floating mb-3">
-                <p class="text-center fw-bold">Riesgo de Fraude</p>
-                <select class="form-select" name="riesgoFraude" aria-label="Default select example">
-                  <option value="Sí">Sí</option>
-                  <option value="No">No</option>
-                </select>
+                <input type="text" class="form-control" name="subproceso" placeholder="Subproceso">
+                <label for="floatingInput">Subproceso</label>
               </div>
             </div>
-            <div class="col">
-              <div class="form-floating mb-3">
-                <p class="text-center fw-bold">Probabilidad</p>
-                <select class="form-select" name="probabilidad" aria-label="Default select example">
-                  <option value="Alta">Alta</option>
-                  <option value="Media">Media</option>
-                  <option value="Baja">Baja</option>
-                </select>
-              </div>
-            </div>
+          </div>
+          <div class="row">
             <div class="col">
               <p class="text-center fw-bold">ID del Control</p>
               <div class="form-floating mb-3">
@@ -189,12 +227,14 @@
               </div>
             </div>
             <div class="col">
+              <p class="text-center fw-bold">General/Proceso</p>
               <div class="form-floating mb-3">
-                <p class="text-center fw-bold">General/Proceso</p>
                 <select class="form-select" name="probabilidad" aria-label="Default select example">
+                  <option selected>...</option>
                   <option value="General">General</option>
                   <option value="Proceso">Proceso</option>
                 </select>
+                <label for="floatingSelect">Seleccione</label>
               </div>
             </div>
           </div>
@@ -214,22 +254,25 @@
           </div>
           <div class="row">
             <div class="col">
+              <p class="text-center fw-bold">Segregación de Funciones</p><br>
               <div class="form-floating mb-3">
-                <br>
-                <p class="text-center fw-bold">Segregación de Funciones</p>
                 <select class="form-select" name="segregacionFunciones" aria-label="Default select example">
+                  <option selected>...</option>
                   <option value="Sí">Sí</option>
                   <option value="No">No</option>
                 </select>
+                <label for="floatingSelect">Seleccione</label>
               </div>
             </div>
             <div class="col">
+              <p class="text-center fw-bold">Documentación (Política, manual, procedimiento, etc.)</p>
               <div class="form-floating mb-3">
-                <p class="text-center fw-bold">Documentación (Política, manual, procedimiento, etc.)</p>
                 <select class="form-select" name="documentacion" aria-label="Default select example">
+                  <option selected>...</option>
                   <option value="Sí">Sí</option>
                   <option value="No">No</option>
                 </select>
+                <label for="floatingSelect">Seleccione</label>
               </div>
             </div>
             <div class="col">
@@ -237,66 +280,79 @@
               <p class="text-center fw-bold">Tipo de Control</p><br>
               <div class="form-floating mb-3">
                 <select class="form-select" name="tipoControl" aria-label="Default select example">
+                  <option selected>...</option>
                   <option value="Preventivo">Preventivo</option>
                   <option value="Detectivo">Detectivo</option>
                 </select>
+                <label for="floatingSelect">Seleccione</label>
               </div>
             </div>
             <div class="col">
+              <br>
+              <p class="text-center fw-bold">Naturaleza adecuada</p><br>
               <div class="form-floating mb-3">
-                <br>
-                <p class="text-center fw-bold">Naturaleza adecuada</p><br>
                 <select class="form-select" name="naturaleza" aria-label="Default select example">
+                  <option selected>...</option>
                   <option value="Sí">Sí</option>
                   <option value="No">No</option>
                 </select>
+                <label for="floatingSelect">Seleccione</label>
               </div>
             </div>
           </div>
           <div class="row">
             <div class="col">
+              <p class="text-center fw-bold">Naturaleza de Control</p>
               <div class="form-floating mb-3">
-                <p class="text-center fw-bold">Naturaleza de Control</p>
                 <select class="form-select" name="naturalezaControl" aria-label="Default select example">
+                  <option selected>...</option>
                   <option value="Manual">Manual</option>
                   <option value="Automático">Automático</option>
                   <option value="Semi-automático">Semi-automático</option>
                 </select>
+                <label for="floatingSelect">Seleccione</label>
               </div>
             </div>
             <div class="col">
+              <p class="text-center fw-bold">Tipo Adecuado</p>
               <div class="form-floating mb-3">
-                <p class="text-center fw-bold">Tipo Adecuado</p>
                 <select class="form-select" name="tipoAdecuado" aria-label="Default select example">
+                  <option selected>...</option>
                   <option value="Sí">Sí</option>
                   <option value="No">No</option>
                 </select>
+                <label for="floatingSelect">Seleccione</label>
               </div>
             </div>
             <div class="col">
               <p class="text-center fw-bold">Frecuencia de Control</p>
               <div class="form-floating mb-3">
                 <select class="form-select" name="frecuenciaControl" aria-label="Default select example">
+                  <option selected>...</option>
                   <option value="Anual">Anual</option>
                   <option value="Por Evento">Por evento</option>
                 </select>
+                <label for="floatingSelect">Seleccione</label>
               </div>
             </div>
             <div class="col">
+              <p class="text-center fw-bold">Frecuencia adecuada</p>
               <div class="form-floating mb-3">
-                <p class="text-center fw-bold">Frecuencia adecuada</p>
                 <select class="form-select" name="frecuenciaControlAdecuada" aria-label="Default select example">
+                  <option selected>...</option>
                   <option value="Sí">Sí</option>
                   <option value="No">No</option>
                 </select>
+                <label for="floatingSelect">Seleccione</label>
               </div>
             </div>
             </div>
             <div class="row">
               <div class="col">
+                <p class="text-center fw-bold">Responsable del Control</p>
                 <div class="form-floating mb-3">
-                  <p class="text-center fw-bold">Responsable del Control</p>
                   <select class="form-select" name="responsableControl" aria-label="Default select example">
+                    <option selected>...</option>
                     <option value="Área de Finanzas">Área de Finanzas</option>
                     <option value="Controlador de Gestión">Controlador de Gestión</option>
                     <option value="Controlador de Gestión Divisional">Controlador de Gestión Divisional</option>
@@ -306,44 +362,53 @@
                     <option value="Gerente de Finanzas y Contabilidad">Gerente de Finanzas y Contabilidad</option>
                     <option value="Jefe de planeación Financiera">Jefe de planeación Financiera</option>
                   </select>
+                  <label for="floatingSelect">Seleccione una opción</label>
                 </div>
               </div>
               <div class="col">
+                <p class="text-center fw-bold">Responsabilidad del Control</p>
                 <div class="form-floating mb-3">
-                  <p class="text-center fw-bold">Responsabilidad del Control</p>
                   <select class="form-select" name="responsabilidadControl" aria-label="Default select example">
+                    <option selected>...</option>
                     <option value="Sí">Sí</option>
                     <option value="No">No</option>
                   </select>
+                  <label for="floatingSelect">Seleccione una opción</label>
                 </div>
               </div>
               <div class="col">
                 <p class="text-center fw-bold">Generación de Evidencia</p>
                 <div class="form-floating mb-3">
                   <select class="form-select" name="generadoEvidencia" aria-label="Default select example">
+                    <option selected>...</option>
                     <option value="Sí">Sí</option>
                     <option value="No">No</option>
                   </select>
+                  <label for="floatingSelect">Seleccione una opción</label>
                 </div>
               </div>
               </div>
               <div class="row">
                 <div class="col">
+                  <p class="text-center fw-bold">Control clave</p><br>
                   <div class="form-floating mb-3">
-                    <p class="text-center fw-bold">Control clave</p><br>
                     <select class="form-select" name="controlClave" aria-label="Default select example">
+                      <option selected>...</option>
                       <option value="Sí">Sí</option>
                       <option value="No">No</option>
                     </select>
+                    <label for="floatingSelect">Seleccione una opción</label>
                   </div>
                 </div>
                 <div class="col">
                   <p class="text-center fw-bold">Control diseñado para mitigar fraude</p>
                   <div class="form-floating mb-3">
                     <select class="form-select" name="diseñoMitigado" aria-label="Default select example">
+                      <option selected>...</option>
                       <option value="Sí">Sí</option>
                       <option value="No">No</option>
                     </select>
+                    <label for="floatingSelect">Seleccione una opción</label>
                   </div>
                 </div>
                 <div class="col">
@@ -355,7 +420,7 @@
                               <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
                             </svg>
                           </button>
-                      <input type="text" id="quantity" name="coberturaControl" class="form-control input-number" value="50" min="1" max="100"> 
+                      <input type="text" maxlength="2" id="quantity" name="coberturaControl" class="form-control input-number" value="50" min="1" max="100" pattern="[0-9]{2}"> 
                           <button type="button" class="quantity-right-plus btn btn-success btn-number" data-type="plus" data-field="">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square" viewBox="0 0 16 16">
                               <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
@@ -373,9 +438,24 @@
                     </div>
                   </div>
                 </div>
+                <div class="row">
+                  <div class="col">
+                    <p class="fw-bold">Responsable(s) del tratamiento del riesgo</p>
+                    <div class="form-floating mb-3">
+                      <input type="text" class="form-control" name="responsable" placeholder="Escriba el/los responsables">
+                      <label for="floatingInput">Escriba el/los responsables</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <p class="fw-bold">Descripción/Notas sore el tratamiento del riesgo</p>
+                  <div class="mb-3">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+                  </div>
+                </div>
           <div class="row">
             <div class="mb-3">
-              <label for="exampleFormControlTextarea1" class="form-label">Observaciones</label>
+              <p class="fw-bold">Observaciones</p>
               <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
             </div>
           </div>
@@ -383,7 +463,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-primary">Añadir Macroproceso</button>
+        <button type="button" class="btn btn-primary">Añadir Control de Riesgo</button>
       </div>
     </div>
   </div>
@@ -490,11 +570,14 @@
         <strong>Granados, Edgar</strong>
       </a>
       <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
-        <li><button type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Agregar Macroproceso
+        <li><button type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#modalRiesgo">
+            Agregar Riesgo
           </button></li>
-        <li><a class="dropdown-item" href="#">Editar Macroproceso</a></li>
-        <li><a class="dropdown-item" href="#">Borrar Macroproceso</a></li>
+          <li><button type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#modalControl">
+            Agregar Control
+          </button></li>
+        <li><a class="dropdown-item" href="#">Editar Riesgo</a></li>
+        <li><a class="dropdown-item" href="#">Borrar Reisgos</a></li>
         <li>
           <hr class="dropdown-divider">
         </li>

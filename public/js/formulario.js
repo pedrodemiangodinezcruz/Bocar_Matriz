@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+    
     var quantitiy=0;
        $('.quantity-right-plus').click(function(e){
             
