@@ -172,7 +172,7 @@ app.listen(3000, function () {
 })
 
 app.get("/", function (req, res) {
-	res.render('index')	
+	res.render('index',  {registro: ''})	
 })
 app.get("/instructivo", function (req, res) {
 	res.render('instructivo')
@@ -198,4 +198,10 @@ app.get("/mapaRiesgo", function (req, res) {
 })
 app.get("/pareto", function (req, res) {
 	res.render('pareto')
+})
+app.get("/registro", function (req, res) {
+	res.render('index', {registro: 'riesgoAlta'})
+})
+app.get("/registroControl", function (req, res) {
+	res.render('index', {registro: 'controlAlta'})
 })
