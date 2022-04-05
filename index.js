@@ -170,7 +170,7 @@ app.get('/consultaPerfil/:id', (req, res) => {
 app.listen(3000, function () {
 	console.log("Servidor corriendo en el puerto 3000");
 })
-
+//Sección de rutas para los archivos .ejs (Vistas)
 app.get("/", function (req, res) {
 	res.render('index',  {registro: ''})	
 })

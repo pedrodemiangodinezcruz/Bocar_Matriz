@@ -3,11 +3,9 @@
 <html lang="en">
 
 <head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
+    <!--Referencias a estilos (Bootstrap y diseño de las tablas)-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <link href="/estilos/header.css" rel="stylesheet">
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/sidebars/">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
@@ -29,6 +27,7 @@
                 d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
         </symbol>
     </svg>
+    <!--Mostrar formulario de altaControl o altaRiesgo, dependiendo del boton seleccionado-->
     <%- include('sidebar', {registro: "" }) %>
         <% if (registro=='riesgoAlta' ) { %>
             <script>
@@ -52,40 +51,6 @@
                                 <div>
                                     Riesgo, dado de alta exitosamente
                                 </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-outline-primary"
-                                data-bs-dismiss="modal">Cerrar</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <% } if (registro=='controlAlta' ) { %>
-                <script>
-                    jQuery(document).ready(function (e) {
-                        $('#altaControl').modal('show');
-
-                    });
-                </script>
-                <div class="modal" id="altaControl">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title">Estatus de solicitud</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="col-auto alert alert-success d-flex align-items-center" role="alert">
-                                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img"
-                                        aria-label="Success:">
-                                        <use xlink:href="#check-circle-fill" />
-                                    </svg>
-                                    <div>
-                                        Control, dado de alta exitosamente
-                                    </div>
-                                </div>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-outline-primary"
@@ -94,7 +59,41 @@
                         </div>
                     </div>
                 </div>
-                <% } %>
+
+                <% } if (registro=='controlAlta' ) { %>
+                    <script>
+                        jQuery(document).ready(function (e) {
+                            $('#altaControl').modal('show');
+
+                        });
+                    </script>
+                    <div class="modal" id="altaControl">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Estatus de solicitud</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="col-auto alert alert-success d-flex align-items-center" role="alert">
+                                        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img"
+                                            aria-label="Success:">
+                                            <use xlink:href="#check-circle-fill" />
+                                        </svg>
+                                        <div>
+                                            Control, dado de alta exitosamente
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-outline-primary"
+                                        data-bs-dismiss="modal">Cerrar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <% } %>
 </body>
 
 </html>
