@@ -1,29 +1,29 @@
 $(document).ready(function(){
     
     var quantitiy=0;
-       $('.quantity-right-plus').click(function(e){
+       $('.cantidad-mas').click(function(e){
             
             // Deja de funcionar como un boton
             e.preventDefault();
             // Toma el id del campo
-            var quantity = parseInt($('#quantity').val());
+            var cantidad = parseInt($('#cantidad').val());
             
             // Incrementar
-                $('#quantity').val(quantity + 1);
+                $('#cantidad').val(cantidad + 1);
             
         });
     
-         $('.quantity-left-minus').click(function(e){
+         $('.cantidad-menos').click(function(e){
             
             e.preventDefault();
         
-            var quantity = parseInt($('#quantity').val());
+            var cantidad = parseInt($('#cantidad').val());
             
         
           
                 // Disminuir
-                if(quantity>0){
-                $('#quantity').val(quantity - 1);
+                if(cantidad>0){
+                $('#cantidad').val(cantidad - 1);
                 }
         });
     });
