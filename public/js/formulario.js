@@ -1,3 +1,4 @@
+//Función creada para el aumneto de porcentaje de cobertura por control
 $(document).ready(function(){
     
     var quantitiy=0;
@@ -13,8 +14,7 @@ $(document).ready(function(){
             
         });
     
-         $('.cantidad-menos').click(function(e){
-            
+         $('.cantidad-menos').click(function(e){ 
             e.preventDefault();
         
             var cantidad = parseInt($('#cantidad').val());

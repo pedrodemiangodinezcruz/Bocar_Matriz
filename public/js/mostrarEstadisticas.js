@@ -1,4 +1,5 @@
 
+//Dependiendo del id(sección) de las tablas, hacer visible u ocultar las secciones
 document.getElementById("ir-tabla-controles").onclick = function() {
     document.getElementById("riesgoInherente").style.display = "none";
     document.getElementById("controles").style.display = "block";

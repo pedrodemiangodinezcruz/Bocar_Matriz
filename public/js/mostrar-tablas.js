@@ -1,4 +1,4 @@
-//Dependiendo del id(sección) de las tablas, disminuir o incrementar el valor
+//Dependiendo del id(sección) de las tablas, hacer visible u ocultar las secciones
       document.getElementById("tabla1").onclick = function() {
         document.getElementById("1").style.display = "none";
         document.getElementById("2").style.display = "table";
