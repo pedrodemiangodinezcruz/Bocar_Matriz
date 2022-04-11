@@ -465,12 +465,41 @@
               'Pedimentos Virtuales - Importación'],
               "Recepción de Bienes y Servicios": ['Recibo de Material y Servicios','Inspección Recibo y Laboratorio de Pruebas','Gestión de Materiales en Cuarentena','Evaluación de Desempeño de Proveedores',
               'Seguimiento a Proveedores'],
-              "Administración de Cuentas por Pagar": ['Verificación de Facturas','Propuesta de Pagos','Realización de Pagos','Trámite de Cuentas de Gastos y Archivo Aduanero','Devolución a Proveedores y Cargos']
+              "Administración de Cuentas por Pagar": ['Verificación de Facturas','Propuesta de Pagos','Realización de Pagos','Trámite de Cuentas de Gastos y Archivo Aduanero','Devolución a Proveedores y Cargos'],
+              "Pronóstico de la demanda y abastecimiento": ['Elaboración de Proyección y Presupuesto anual de Ventas','Análisis de la variación de requerimientos','Desarrollo del Sistema Logístico'],
+              "Planeación y programación de la producción": ['Planeación de la Producción corto plazo','Planeación de la Producción mediano y largo plazo'],
+              "Solicitud de reserva de recursos": ['Planeación y Reabastecimiento de Materiales mediano plazo','Planeación y Reabastecimiento de Materiales largo plazo'],
+              "Producción y aseguramiento de Calidad": ['Gestión de Liberación de Procesos','Gestión del Control del Proceso','Gestión del Proceso de Medición del Producto','Ejecución del Plan de Producción','Tratamiento de Material de Retorno','Gestión de Ingeniería de Procesos (Documentación)','Gestión de Certificación 100% y Retrabajos'],
+              "Administración de inventarios": ['',''],
+              "Órdenes de Venta": ['',''], 
+              "Distribución del Producto (Packing, Picking)": ['',''],
+              "Facturación": ['',''], 
+              "Administración de la Cuenta por Cobrar": ['',''], 
+              "Planes de Mantenimiento": ['',''], 
+              "Identificación de Trabajo": ['',''], 
+              "Planeación y Ejecución de Trabajos": ['',''], 
+              "Administración de Liquidación de Trabajos": ['',''], 
+              "Detección de Necesidad y Solicitud de inversiones": ['',''], 
+              "Creación de Activos Fijos": ['',''], 
+              "Administración de Activos Fijos": ['',''], 
+              "Desinversión de Activos Fijos": ['',''], 
+              "Cierre de Activos Fijos": ['',''], 
+              "Definición de Estructura y Planes Financieros": ['',''], 
+              "Registro y Contabilización": ['',''], 
+              "Cierres Financieros": ['',''], 
+              "Reporte de Resultados": ['',''], 
+              "Soporte y Cumplimiento": ['',''], 
+              "Atracción de Talento": ['',''], 
+              "Desarrollo de Talento ": ['',''], 
+              "Administración de personal": ['',''], 
+              "Planeación, Compensaciones y Beneficios": ['',''], 
+              "Retiro": ['',''], 
+              "Procesos Críticos fuera de Macros": ['','']
             };
-            var proceso = $("#proceso");
+            var general = $("#proceso");
             var subproceso = $("#subproceso option");
 
-            proceso.change(function () {
+            general.change(function () {
               var opciones = subselect[this.options[this.selectedIndex].textContent];
 
               if (opciones.length != 0) {
