@@ -22,15 +22,32 @@
                     <tr>
                         <th scope="col" colspan="6" class="anaranjado" style="text-align: left;">Riesgo Inherente</th>
                     </tr>
-                    <tr>
-                        <th scope="col" colspan="6" style="text-align: center;">
+                    <tr>  
+                        <th>
+                            <div class="form-floating mb-3">
+                              <select class="form-select" id="seleccionProceso" name="macroproceso" aria-label="Default select example">
+                                <option selected>...</option>
+                                <option value="Concepto al Producto">Concepto al Producto</option>
+                                <option value="Compra al Pago">Compra al Pago</option>
+                                <option value="Demanda al Abasto">Demanda al Abasto</option>
+                                <option value="Pedido al Cobro">Pedido al Cobro</option>
+                                <option value=">Mantenimiento a la Liquidación">Mantenimiento a la Liquidación</option>
+                                <option value="Inversión a la Desinversión">Inversión a la Desinversión</option>
+                                <option value="Finanzas a la Administración">Finanzas a la Administración</option>
+                                <option value="Contratación al Retiro">Contratación al Retiro</option>
+                                <option value="Procesos Criticos fuera de Macros">Procesos Criticos fuera de Macros</option>
+                              </select>
+                              <label for="floatingSelect">Seleccione el macroproceso al que guste ver su gráfico adjunto
+                              </label>
+                            </div>
+                        </th>           
+                        <th scope="col" style="text-align: center; vertical-align: middle;">
                             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
                                 class="bi bi-arrow-right-short" viewBox="0 0 16 16" id="ir-tabla-controles">
                                 <path fill-rule="evenodd"
                                     d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
                             </svg>
-                        </th>
-                    </tr>
+                        </tr>
                     <th class="naranja">Nivel de Riesgo</th>
                     <th class="naranja">Frecuencia</th>
                 </thead>
@@ -330,3 +347,5 @@
         </script>
         <!--Sript manejador de ocltar y mostrar diferentes secciones estadisticas-->
         <script src="/js/mostrarEstadisticas.js"></script>
+            <!--Script para funcionalidad de los selects de los proceso adjuntos-->
+    <script src="/js/selectsProcesos.js"></script>

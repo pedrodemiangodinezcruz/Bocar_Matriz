@@ -27,9 +27,28 @@
   <!--Inclución de header y sidebar-->
   <%- include('header', {seccion: "mapaRiesgo" }) %>
     <%- include('sidebar') %>
-      <div class="col-auto ">
+        <div class="col-auto">
         <table class="table table-bordered text-center">
           <thead>
+            <tr>
+              <p class="text-center fw-bold">Macroproceso adjunto</p>
+              <div class="form-floating mb-3">
+                <select class="form-select" id="seleccionProceso" name="macroproceso" aria-label="Default select example">
+                  <option selected>...</option>
+                  <option value="Concepto al Producto">Concepto al Producto</option>
+                  <option value="Compra al Pago">Compra al Pago</option>
+                  <option value="Demanda al Abasto">Demanda al Abasto</option>
+                  <option value="Pedido al Cobro">Pedido al Cobro</option>
+                  <option value=">Mantenimiento a la Liquidación">Mantenimiento a la Liquidación</option>
+                  <option value="Inversión a la Desinversión">Inversión a la Desinversión</option>
+                  <option value="Finanzas a la Administración">Finanzas a la Administración</option>
+                  <option value="Contratación al Retiro">Contratación al Retiro</option>
+                  <option value="Procesos Criticos fuera de Macros">Procesos Criticos fuera de Macros</option>
+                </select>
+                <label for="floatingSelect">Seleccione un macroproceso
+                </label>
+              </div>
+            </tr>
             <tr>
               <th scope="col" colspan="3" class="anaranjado">RIESGO INHERENTE</th>
             </tr>
@@ -114,7 +133,7 @@
         </table>
 
       </div>
-      <div class="col-6">
+      <div class="col-6" id="mapa">
         <figure class="highcharts-figure">
           <div id="container"></div>
           <p class="highcharts-description">
@@ -123,6 +142,7 @@
         </figure>
         <!--Cierre de dive desde la side bar-->
       </div>
+    
 </body>
  <!--Script de la libreria highcharts; manejador del gráfico-->
 <script>
@@ -225,3 +245,5 @@
 
   });
 </script>
+    <!--Script para funcionalidad de los selects de los proceso adjuntos-->
+    <script src="/js/selectsProcesos.js"></script>

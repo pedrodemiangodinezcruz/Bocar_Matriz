@@ -197,7 +197,7 @@ app.get("/mapaRiesgo", function (req, res) {
 	res.render('mapaRiesgo')
 })
 app.get("/pareto", function (req, res) {
-	res.render('pareto')
+	res.render('pareto', {proceso: 'Concepto al Producto'})
 })
 app.get("/registro", function (req, res) {
 	res.render('index', {registro: 'riesgoAlta'})
@@ -205,3 +205,35 @@ app.get("/registro", function (req, res) {
 app.get("/registroControl", function (req, res) {
 	res.render('index', {registro: 'controlAlta'})
 })
+/*Direcciones para gráficos*/ 
+app.get("/productoPareto", function (req, res) {
+	res.render('pareto', {proceso: 'Concepto al Producto'})
+})
+app.get("/compraPareto", function (req, res) {
+	res.render('pareto', {proceso: 'Compra al Pago'})
+})
+app.get("/abastoPareto", function (req, res) {
+	res.render('pareto', {proceso: 'Demanda al Abasto'})
+})
+app.get("/pedidoPareto", function (req, res) {
+	res.render('pareto', {proceso: 'Pedido al Cobro'})
+})
+app.get("/mantenimientoPareto", function (req, res) {
+	res.render('pareto', {proceso: 'Mantenimiento a la Liquidación'})
+})
+app.get("/inversionPareto", function (req, res) {
+	res.render('pareto', {proceso: 'Inversión a la Desinversión'})
+})
+app.get("/finanzasPareto", function (req, res) {
+	res.render('pareto', {proceso: 'Finanzas a la Administración'})
+})
+
+app.get("/contratacionPareto", function (req, res) {
+	res.render('pareto', {proceso: 'Contratación al Retiro'})
+})
+
+app.get("/procesosPareto", function (req, res) {
+	res.render('pareto', {proceso: 'Procesos Críticos fuera de Macros'})
+})
+
+              
