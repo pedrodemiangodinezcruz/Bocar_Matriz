@@ -31,17 +31,17 @@
           <tr>
             <p class="text-center fw-bold">Macroproceso adjunto</p>
               <div class="form-floating mb-3">
-                <select class="form-select" id="seleccionProceso" name="macroproceso" aria-label="Default select example">
+                <select class="form-select" id="seleccionProceso" name="macroproceso" aria-label="Default select example" onchange="location = this.value;">
                   <option selected>...</option>
-                  <option value="Concepto al Producto">Concepto al Producto</option>
-                  <option value="Compra al Pago">Compra al Pago</option>
-                  <option value="Demanda al Abasto">Demanda al Abasto</option>
-                  <option value="Pedido al Cobro">Pedido al Cobro</option>
-                  <option value=">Mantenimiento a la Liquidación">Mantenimiento a la Liquidación</option>
-                  <option value="Inversión a la Desinversión">Inversión a la Desinversión</option>
-                  <option value="Finanzas a la Administración">Finanzas a la Administración</option>
-                  <option value="Contratación al Retiro">Contratación al Retiro</option>
-                  <option value="Procesos Criticos fuera de Macros">Procesos Criticos fuera de Macros</option>
+                  <option value="/productoMapaResidual">Concepto al Producto</option>
+                  <option value="/compraMapaResidual">Compra al Pago</option>
+                  <option value="/abastoMapaResidual">Demanda al Abasto</option>
+                  <option value="/pedidoMapaResidual">Pedido al Cobro</option>
+                  <option value="/mantenimientoMapaResidual">Mantenimiento a la Liquidación</option>
+                  <option value="/inversionMapaResidual">Inversión a la Desinversión</option>
+                  <option value="finanzasMapaResidual">Finanzas a la Administración</option>
+                  <option value="/contratacionMapaResidual">Contratación al Retiro</option>
+                  <option value="/procesosMapaResidual">Procesos Criticos fuera de Macros</option>
                 </select>
                 <label for="floatingSelect">Seleccione un macroproceso
                 </label>
@@ -134,7 +134,7 @@
       <figure class="highcharts-figure">
         <div id="container"></div>
         <p class="highcharts-description">
-          Mapa de calor Inherente asignando por ID cada riesgo.
+          Mapa de calor inherente residual asignando del macroproceso <strong>"<%= proceso %>"</strong> mostrando ID de cada riesgo.
         </p>
       </figure>
       <!--Cierre de div desde la side bar-->
@@ -240,6 +240,6 @@
         }
 
       });
+    
+  
     </script>
-        <!--Script para funcionalidad de los selects de los proceso adjuntos-->
-        <script src="/js/selectsProcesos.js"></script>

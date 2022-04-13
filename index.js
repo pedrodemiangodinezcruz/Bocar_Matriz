@@ -172,7 +172,7 @@ app.listen(3000, function () {
 })
 //Sección de rutas para los archivos .ejs (Vistas)
 app.get("/", function (req, res) {
-	res.render('index',  {registro: ''})	
+	res.render('index', { registro: '' })
 })
 app.get("/instructivo", function (req, res) {
 	res.render('instructivo')
@@ -188,52 +188,140 @@ app.get("/criterios", function (req, res) {
 	res.render('criterios')
 })
 app.get("/estadisticas", function (req, res) {
-	res.render('estadisticas')
+	res.render('estadisticas', { proceso: 'Concepto al Producto' })
 })
 app.get("/mapaResidual", function (req, res) {
-	res.render('mapaResidual' )
+	res.render('mapaResidual', { proceso: 'Concepto al Producto' })
 })
 app.get("/mapaRiesgo", function (req, res) {
-	res.render('mapaRiesgo')
+	res.render('mapaRiesgo', { proceso: 'Concepto al Producto' })
 })
 app.get("/pareto", function (req, res) {
-	res.render('pareto', {proceso: 'Concepto al Producto'})
+	res.render('pareto', { proceso: 'Concepto al Producto' })
 })
 app.get("/registro", function (req, res) {
-	res.render('index', {registro: 'riesgoAlta'})
+	res.render('index', { registro: 'riesgoAlta' })
 })
 app.get("/registroControl", function (req, res) {
-	res.render('index', {registro: 'controlAlta'})
+	res.render('index', { registro: 'controlAlta' })
 })
-/*Direcciones para gráficos*/ 
+/*Direcciones para gráfico de Pareto*/
 app.get("/productoPareto", function (req, res) {
-	res.render('pareto', {proceso: 'Concepto al Producto'})
+	res.render('pareto', { proceso: 'Concepto al Producto' })
 })
 app.get("/compraPareto", function (req, res) {
-	res.render('pareto', {proceso: 'Compra al Pago'})
+	res.render('pareto', { proceso: 'Compra al Pago' })
 })
 app.get("/abastoPareto", function (req, res) {
-	res.render('pareto', {proceso: 'Demanda al Abasto'})
+	res.render('pareto', { proceso: 'Demanda al Abasto' })
 })
 app.get("/pedidoPareto", function (req, res) {
-	res.render('pareto', {proceso: 'Pedido al Cobro'})
+	res.render('pareto', { proceso: 'Pedido al Cobro' })
 })
 app.get("/mantenimientoPareto", function (req, res) {
-	res.render('pareto', {proceso: 'Mantenimiento a la Liquidación'})
+	res.render('pareto', { proceso: 'Mantenimiento a la Liquidación' })
 })
 app.get("/inversionPareto", function (req, res) {
-	res.render('pareto', {proceso: 'Inversión a la Desinversión'})
+	res.render('pareto', { proceso: 'Inversión a la Desinversión' })
 })
 app.get("/finanzasPareto", function (req, res) {
-	res.render('pareto', {proceso: 'Finanzas a la Administración'})
+	res.render('pareto', { proceso: 'Finanzas a la Administración' })
 })
 
 app.get("/contratacionPareto", function (req, res) {
-	res.render('pareto', {proceso: 'Contratación al Retiro'})
+	res.render('pareto', { proceso: 'Contratación al Retiro' })
 })
 
 app.get("/procesosPareto", function (req, res) {
-	res.render('pareto', {proceso: 'Procesos Críticos fuera de Macros'})
+	res.render('pareto', { proceso: 'Procesos Críticos fuera de Macros' })
+})
+/*Direcciones para gráfico de estadisitcas*/
+app.get("/productoEstadisticas", function (req, res) {
+	res.render('Estadisticas', { proceso: 'Concepto al Producto' })
+})
+app.get("/compraEstadisticas", function (req, res) {
+	res.render('estadisticas', { proceso: 'Compra al Pago' })
+})
+app.get("/abastoEstadisticas", function (req, res) {
+	res.render('estadisticas', { proceso: 'Demanda al Abasto' })
+})
+app.get("/pedidoEstadisticas", function (req, res) {
+	res.render('estadisticas', { proceso: 'Pedido al Cobro' })
+})
+app.get("/mantenimientoEstadisticas", function (req, res) {
+	res.render('estadisticas', { proceso: 'Mantenimiento a la Liquidación' })
+})
+app.get("/inversionEstadisticas", function (req, res) {
+	res.render('estadisticas', { proceso: 'Inversión a la Desinversión' })
+})
+app.get("/finanzasEstadisticas", function (req, res) {
+	res.render('estadisticas', { proceso: 'Finanzas a la Administración' })
 })
 
-              
+app.get("/contratacionEstadisticas", function (req, res) {
+	res.render('estadisticas', { proceso: 'Contratación al Retiro' })
+})
+
+app.get("/procesosEstadisticas", function (req, res) {
+	res.render('estadisticas', { proceso: 'Procesos Críticos fuera de Macros' })
+})
+/*Direcciones para gráfico de mapa de Riesgo*/
+app.get("/productoMapaRiesgo", function (req, res) {
+	res.render('mapaRiesgo', { proceso: 'Concepto al Producto' })
+})
+app.get("/compraMapaRiesgo", function (req, res) {
+	res.render('mapaRiesgo', { proceso: 'Compra al Pago' })
+})
+app.get("/abastoMapaRiesgo", function (req, res) {
+	res.render('mapaRiesgo', { proceso: 'Demanda al Abasto' })
+})
+app.get("/pedidoMapaRiesgo", function (req, res) {
+	res.render('mapaRiesgo', { proceso: 'Pedido al Cobro' })
+})
+app.get("/mantenimientoMapaRiesgo", function (req, res) {
+	res.render('mapaRiesgo', { proceso: 'Mantenimiento a la Liquidación' })
+})
+app.get("/inversionMapaRiesgo", function (req, res) {
+	res.render('mapaRiesgo', { proceso: 'Inversión a la Desinversión' })
+})
+app.get("/finanzasMapaRiesgo", function (req, res) {
+	res.render('mapaRiesgo', { proceso: 'Finanzas a la Administración' })
+})
+
+app.get("/contratacionMapaRiesgo", function (req, res) {
+	res.render('mapaRiesgo', { proceso: 'Contratación al Retiro' })
+})
+
+app.get("/procesosMapaRiesgo", function (req, res) {
+	res.render('mapaRiesgo', { proceso: 'Procesos Críticos fuera de Macros' })
+})
+/*Direcciones para gráfico de mapa Residual*/
+app.get("/productoMapaResidual", function (req, res) {
+	res.render('mapaResidual', { proceso: 'Concepto al Producto' })
+})
+app.get("/compraMapaResidual", function (req, res) {
+	res.render('mapaResidual', { proceso: 'Compra al Pago' })
+})
+app.get("/abastoMapaResidual", function (req, res) {
+	res.render('mapaResidual', { proceso: 'Demanda al Abasto' })
+})
+app.get("/pedidoMapaResidual", function (req, res) {
+	res.render('mapaResidual', { proceso: 'Pedido al Cobro' })
+})
+app.get("/mantenimientoMapaResidual", function (req, res) {
+	res.render('mapaResidual', { proceso: 'Mantenimiento a la Liquidación' })
+})
+app.get("/inversionMapaResidual", function (req, res) {
+	res.render('mapaResidual', { proceso: 'Inversión a la Desinversión' })
+})
+app.get("/finanzasMapaResidual", function (req, res) {
+	res.render('mapaResidual', { proceso: 'Finanzas a la Administración' })
+})
+
+app.get("/contratacionMapaResidual", function (req, res) {
+	res.render('mapaResidual', { proceso: 'Contratación al Retiro' })
+})
+
+app.get("/procesosMapaResidual", function (req, res) {
+	res.render('mapaResidual', { proceso: 'Procesos Críticos fuera de Macros' })
+})

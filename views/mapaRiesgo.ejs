@@ -12,7 +12,6 @@
 <head>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   <script src="/js/plotly-2.9.0.min.js"></script>
-  <script src="/js/mapaRiesgo.js"></script>
   <script src="https://code.highcharts.com/highcharts.js"></script>
   <!--Modulos de highcharts-->
   <script src="https://code.highcharts.com/highcharts.js"></script>
@@ -25,7 +24,7 @@
 
 <body>
   <!--Inclución de header y sidebar-->
-  <%- include('header', {seccion: "mapaRiesgo" }) %>
+  <%- include('header', {seccion: "MapaRiesgo" }) %>
     <%- include('sidebar') %>
         <div class="col-auto">
         <table class="table table-bordered text-center">
@@ -33,17 +32,17 @@
             <tr>
               <p class="text-center fw-bold">Macroproceso adjunto</p>
               <div class="form-floating mb-3">
-                <select class="form-select" id="seleccionProceso" name="macroproceso" aria-label="Default select example">
+                <select class="form-select" id="seleccionProceso" name="macroproceso" aria-label="Default select example" onchange="location = this.value;">
                   <option selected>...</option>
-                  <option value="Concepto al Producto">Concepto al Producto</option>
-                  <option value="Compra al Pago">Compra al Pago</option>
-                  <option value="Demanda al Abasto">Demanda al Abasto</option>
-                  <option value="Pedido al Cobro">Pedido al Cobro</option>
-                  <option value=">Mantenimiento a la Liquidación">Mantenimiento a la Liquidación</option>
-                  <option value="Inversión a la Desinversión">Inversión a la Desinversión</option>
-                  <option value="Finanzas a la Administración">Finanzas a la Administración</option>
-                  <option value="Contratación al Retiro">Contratación al Retiro</option>
-                  <option value="Procesos Criticos fuera de Macros">Procesos Criticos fuera de Macros</option>
+                  <option value="/productoMapaRiesgo">Concepto al Producto</option>
+                  <option value="/compraMapaRiesgo">Compra al Pago</option>
+                  <option value="/abastoMapaRiesgo">Demanda al Abasto</option>
+                  <option value="/pedidoMapaRiesgo">Pedido al Cobro</option>
+                  <option value="/mantenimientoMapaRiesgo">Mantenimiento a la Liquidación</option>
+                  <option value="/inversionMapaRiesgo">Inversión a la Desinversión</option>
+                  <option value="finanzasMapaRiesgo">Finanzas a la Administración</option>
+                  <option value="/contratacionMapaRiesgo">Contratación al Retiro</option>
+                  <option value="/procesosMapaRiesgo">Procesos Criticos fuera de Macros</option>
                 </select>
                 <label for="floatingSelect">Seleccione un macroproceso
                 </label>
@@ -137,7 +136,7 @@
         <figure class="highcharts-figure">
           <div id="container"></div>
           <p class="highcharts-description">
-            Mapa de calor Inherente asignando por ID cada riesgo.
+            Mapa de calor inherente asignando del macroproceso <strong>"<%= proceso %>"</strong> mostrando ID de cada riesgo.
           </p>
         </figure>
         <!--Cierre de dive desde la side bar-->
@@ -146,6 +145,7 @@
 </body>
  <!--Script de la libreria highcharts; manejador del gráfico-->
 <script>
+
   function getPointCategoryName(point, dimension) {
     var series = point.series,
       isY = dimension === 'y',
@@ -245,5 +245,3 @@
 
   });
 </script>
-    <!--Script para funcionalidad de los selects de los proceso adjuntos-->
-    <script src="/js/selectsProcesos.js"></script>
