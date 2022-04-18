@@ -184,6 +184,9 @@ app.get("/metodologia", function (req, res) {
 app.get("/matriz", function (req, res) {
 	res.render('matriz', { registro: '' })
 })
+app.get("/causas", function (req, res) {
+	res.render('causas')
+})
 app.get("/criterios", function (req, res) {
 	res.render('criterios')
 })
