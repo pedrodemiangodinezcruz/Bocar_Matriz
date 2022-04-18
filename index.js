@@ -181,9 +181,17 @@ app.get("/instructivo", function (req, res) {
 app.get("/metodologia", function (req, res) {
 	res.render('metodologia')
 })
+//Sección de rutas para la matriz de riesgos
 app.get("/matriz", function (req, res) {
-	res.render('matriz', { registro: '' })
+	res.render('matriz', { registro: '' , edicionRiesgo: '', eliminacionRiesgo:''})
 })
+app.get("/edicionRiesgo", function (req, res) {
+	res.render('matriz', { registro: '' , edicionRiesgo: 'verdadero', eliminacionRiesgo: '' })
+})
+app.get("/eliminacionRiesgo", function (req, res) {
+	res.render('matriz', { registro: '' , edicionRiesgo: '', eliminacionRiesgo: 'verdadero' })
+})
+
 app.get("/causas", function (req, res) {
 	res.render('causas')
 })
