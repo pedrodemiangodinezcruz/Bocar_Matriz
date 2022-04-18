@@ -182,7 +182,7 @@ app.get("/metodologia", function (req, res) {
 	res.render('metodologia')
 })
 app.get("/matriz", function (req, res) {
-	res.render('matriz')
+	res.render('matriz', { registro: '' })
 })
 app.get("/criterios", function (req, res) {
 	res.render('criterios')
@@ -200,10 +200,10 @@ app.get("/pareto", function (req, res) {
 	res.render('pareto', { proceso: 'Concepto al Producto' })
 })
 app.get("/registro", function (req, res) {
-	res.render('index', { registro: 'riesgoAlta' })
+	res.render('matriz', { registro: 'riesgoAlta' })
 })
 app.get("/registroControl", function (req, res) {
-	res.render('index', { registro: 'controlAlta' })
+	res.render('matriz', { registro: 'controlAlta' })
 })
 /*Direcciones para gráfico de Pareto*/
 app.get("/productoPareto", function (req, res) {
