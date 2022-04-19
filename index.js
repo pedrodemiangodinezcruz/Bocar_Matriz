@@ -191,10 +191,24 @@ app.get("/edicionRiesgo", function (req, res) {
 app.get("/eliminacionRiesgo", function (req, res) {
 	res.render('matriz', { registro: '' , edicionRiesgo: '', eliminacionRiesgo: 'verdadero' })
 })
-
+//Sección de rutas para as causas
 app.get("/causas", function (req, res) {
-	res.render('causas')
+	res.render('causas', { altaCausa: '' , edicionCausa: '', eliminacionCausa: '' })
 })
+app.get("/altaCausa", function (req, res) {
+	res.render('causas', { altaCausa: 'verdadero' , edicionCausa: '', eliminacionCausa: '' })
+})
+app.get("/edicionCausa", function (req, res) {
+	res.render('causas', { altaCausa: '' , edicionCausa: 'verdadero', eliminacionCausa: '' })
+})
+
+app.get("/eliminacionCausa", function (req, res) {
+	res.render('causas', { altaCausa: '' , edicionCausa: '', eliminacionCausa: 'verdadero' })
+})
+
+
+
+
 app.get("/criterios", function (req, res) {
 	res.render('criterios')
 })
@@ -211,10 +225,10 @@ app.get("/pareto", function (req, res) {
 	res.render('pareto', { proceso: 'Concepto al Producto' })
 })
 app.get("/registro", function (req, res) {
-	res.render('matriz', { registro: 'riesgoAlta' })
+	res.render('matriz', { registro: 'riesgoAlta', edicionRiesgo: '', eliminacionRiesgo: '' })
 })
 app.get("/registroControl", function (req, res) {
-	res.render('matriz', { registro: 'controlAlta' })
+	res.render('matriz', { registro: 'controlAlta', edicionRiesgo: '', eliminacionRiesgo: '' })
 })
 /*Direcciones para gráfico de Pareto*/
 app.get("/productoPareto", function (req, res) {

@@ -72,3 +72,7 @@ table{
 .row>* {
     padding-left: 0 !important;
 }
+
+a {
+ text-decoration: none;
+}
