@@ -26,13 +26,14 @@
   <!--Inclución de header y sidebar-->
   <%- include('header', {seccion: "mapaRiesgo" }) %>
     <%- include('sidebar') %>
-        <div class="col-auto">
+      <div class="col-auto">
         <table class="table table-bordered text-center">
           <thead>
             <tr>
               <p class="text-center fw-bold">Macroproceso adjunto</p>
               <div class="form-floating mb-3">
-                <select class="form-select" id="seleccionProceso" name="macroproceso" aria-label="Default select example" onchange="location = this.value;">
+                <select class="form-select" id="seleccionProceso" name="macroproceso"
+                  aria-label="Default select example" onchange="location = this.value;">
                   <option selected>...</option>
                   <option value="/productoMapaRiesgo">Concepto al Producto</option>
                   <option value="/compraMapaRiesgo">Compra al Pago</option>
@@ -136,13 +137,14 @@
         <figure class="highcharts-figure">
           <div id="container"></div>
           <p class="highcharts-description">
-            Mapa de calor inherente asignando del macroproceso <strong>"<%= proceso %>"</strong> mostrando ID de cada riesgo.
+            Mapa de calor inherente asignando del macroproceso <strong>"<%= proceso %>"</strong> mostrando ID de cada
+            riesgo.
           </p>
         </figure>
         <!--Cierre de dive desde la side bar-->
       </div>
 </body>
- <!--Script de la libreria highcharts; manejador del gráfico-->
+<!--Script de la libreria highcharts; manejador del gráfico-->
 <script>
 
   function getPointCategoryName(point, dimension) {
