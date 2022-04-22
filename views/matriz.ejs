@@ -96,9 +96,9 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td >7.1 Finanzas de la Administración</td>
-                        <td >7.1 Definición de Estructura y Planes Financieros</td>
-                        <td >7.1.2 Preparación de presupuesto anual</td>
+                        <td id="editable">7.1 Finanzas de la Administración</td>
+                        <td id="editable">7.1 Definición de Estructura y Planes Financieros</td>
+                        <td id="editable">7.1.2 Preparación de presupuesto anual</td>
                         <td >R-M7-01</td>
                         <td >Errores u omisiones en la estimación de premisas macroeconómicas para presupuesto</td>
                         <td >Información incorrecta, incompleta o no confiable desde su origen externo a este proceso</td>
@@ -138,12 +138,12 @@
                         <td >19%</td>
                         <td >48%</td>
                         <td >Medio</td>
-                        <td >M</td>
-                        <td >En blanco</td>
-                        <td >Se sugiere formalizar que la evidencia sea una confirmación vía correo electrónico.</td>
+                        <td contenteditable="true">M</td>
+                        <td contenteditable="true">En blanco</td>
+                        <td id="editable">Se sugiere formalizar que la evidencia sea una confirmación vía correo electrónico.</td>
                         <th scope="col">
                             <a id="botonEditar">
-                                <button type="button" class="btn btn-success" id="botonEditar">Editar Riesgo
+                                <button type="button" class="btn btn-success" id="botonEditar" >Editar Riesgo
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                         class="bi bi-pencil-square" viewBox="0 0 16 16">
                                         <path
@@ -188,7 +188,7 @@
                     d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
             </symbol>
         </svg>
-        <script>src="/js/matriz"</script>
+
 
         <!--Modales de alta de riesgo y control-->
         <% if (registro=='riesgoAlta' ) { %>
@@ -328,3 +328,5 @@
                                     </div>
                                     <% } %>
 
+<!--Sript manejador de mostrar y ocultar tablas-->
+<script src="/js/matriz.js"></script>
