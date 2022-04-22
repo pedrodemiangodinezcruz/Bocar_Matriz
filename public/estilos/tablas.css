@@ -76,3 +76,6 @@ table{
 a {
  text-decoration: none;
 }
+#botonGuardar{
+    display: none;
+}
