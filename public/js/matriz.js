@@ -7,5 +7,6 @@
 			/*Cambiar el atributo global contentEditable a verdadero para poder editar los valores
 			de los riesgos y controles*/
 		$(".editable").attr("contentEditable", true);
+		//$(".editable").css("background", "red");
 	  //}
 	}
