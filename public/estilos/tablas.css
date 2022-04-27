@@ -60,6 +60,10 @@ background-color: rgb(109, 241, 109) !important;
 }
 table{
     vertical-align: middle;
+	
+}
+th,td{
+	border-color: rgba(133, 139, 129, 0.623) !important;
 }
 .link{
     color: white; 
